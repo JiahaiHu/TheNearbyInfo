@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发布主题</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="weui.css">
+	<style type="text/css">
+		body, input, textarea {
+			font-family: Roboto;
+		}
+
+		.weui-cell::before {
+			left: 0;
+		}
+
+		*::-webkit-input-placeholder {
+			color: #d1d1d1;
+			font-size: 16px;
+		}
+
+		*::-moz-placeholder {
+			color: #d1d1d1;
+			font-size: 16px;
+		}
+
+		.weui-cells__title {
+			margin: 0;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+<div class="weui-cell">
+	<div class="weui-cell__hd">
+		<label class="weui-label">发布</label>
+	</div>
+	<div class="weui-cell__bd">
+		<input class="weui-input" placeholder="有什么想要说的" type="text">
+	</div>
+</div>
+<div class="weui-cell weui-cells_form">
+	<div class="weui-cell__hd" style="position: relative; top: -43px;">
+		<label class="weui-label">内容</label>
+	</div>
+	<div class="weui-cell__bd">
+		<textarea class="weui-textarea" placeholder="我想告诉周围的人" rows="3" style="line-height: 25px;height: 75px;" onkeyup="CountWords(this,'wordsNum')"></textarea>
+		<div class="weui-textarea-counter">
+			<span id="wordsNum">0</span>/200
+		</div>
+	</div>
+</div>
+<div class="weui-gallery" id="gallery" style="opacity: 0; display: none;">
+	<span class="weui-gallery__img" id="galleryImg" style="background-image:url(./pic_160.png)"></span>
+	<div class="weui-gallery__opr">
+		<a href="javascript:" class="weui-gallery__del">
+			<i class="weui-icon-delete weui-icon_gallery-delete"></i>
+		</a>
+	</div>
+</div>
+<div class="weui-cells weui-cells_form" style="margin-top: 0;">
+	<div class="weui-cell">
+		<div class="weui-cell__bd">
+			<div class="weui-uploader">
+				<div class="weui-uploader__hd">
+					<p class="weui-uploader__title">图片上传</p>
+					<div class="weui-uploader__info">1/1</div>
+				</div>
+				<div class="weui-uploader__bd">
+					<ul class="weui-uploader__files" id="uploaderFiles">
+                        <li class="weui-uploader__file" style="background-image:url(./pic_160.png)"></li>
+                    </ul>
+                    <div class="weui-uploader__input-box">
+                        <input id="uploaderInput" class="weui-uploader__input" accept="image/*" multiple="" type="file">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="weui-cells__title" style="height: 30px; background-color: #f8f8f8"></div>
+<div class="weui-cells">
+	<a class="weui-cell weui-cell_access" href="position.html">
+		<div class="weui-cell__bd">
+			<p>我的位置</p>
+		</div>
+		<div class="weui-cell__ft"></div>
+	</a>
+</div>
+<div class="weui-cells weui-cells_form" style="margin-top: 0;">
+	<div class="weui-cell weui-cell_switch">
+		<div class="weui-cell__bd">显示我的微信号</div>
+		<div class="weui-cell__ft">
+			<label class="weui-switch-cp" for="switchCP">
+					<input id="switchCP" class="weui-switch-cp__input" checked="checked" type="checkbox">
+					<div class="weui-switch-cp__box"></div>
+			</label>
+		</div>
+	</div>
+</div>
+<div class="weui-btn-area" style="margin-top: 40px;">
+	<a class="weui-btn weui-btn_primary" href="./published.html">发布</a>
+</div>
+</body>
+<script type="text/javascript">
+function CountWords(obj,showId){
+	var str = obj.value;
+	var charCount = str.length;
+	document.getElementById(showId).innerHTML = charCount;
+}
+</script>
+</html>

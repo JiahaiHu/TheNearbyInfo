@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no">
+	<title>我的位置</title>
+	<link rel="stylesheet" type="text/css" href="weui.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<style type="text/css">
+		.history-topic .weui-cells {
+			margin-top: 0;
+		}
+
+		.history-topic .weui-cell {
+			display: box;
+			display: -webkit-box;
+		}
+
+		.history-topic .weui-cell__hd {
+			height: 79px;
+		}
+
+		.history-topic img {
+			border-radius: 50%;
+			overflow: hidden;
+			border: 1px solid #d1d1d1;
+		}
+	</style>
+</head>
+<body style="height:100%;overflow:hidden;">
+<div class="map-header">
+	<div class="map-header-content">
+		<i class="map-header-icon">
+			<img class="map-header-icon-img" src="position.png">
+		</i>
+		<span class="map-header-text">华中科技大学东校区</span>
+	</div>
+</div>
+<div class="map-body">
+	<ul class="map-talk-list">
+		<li class="map-talk-item map-talk-item-1">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-2">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-3">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-4">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-5">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-6">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-7">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-8">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-9">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+		<li class="map-talk-item map-talk-item-10">
+			<span class="map-talk-item-text">炸了</span>
+		</li>
+	</ul>
+	<div class="map-mypos">
+		<img class="map-mypos-icon" src="mypos.svg">
+	</div>
+</div>
+<div class="location">
+	<a class="location-lk" href="javascript:;">
+		<img class="location-img" src="./location.svg">
+	</a>
+</div>
+<div id="cmd" class="history-topic" style="transform:translateY(100%);">
+	<div class="history-topic-content">
+			<a id="hidebtn" href="javascript:;" style="transform:rotate(180deg);"></a>
+			<div class="history-topic-content-header">
+				<p class="topic-title">好像有什么东西炸了</p>
+				<p class="topic-meta">
+					<span style="margin-right:5px;">2016-12-15</span>
+					<span>华中科技大学东校区</span>
+				</p>
+				<p class="topic-username">联系人</p>
+			</div>
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd">
+						<img src="pic_160.png" style="display:block;width:60px;margin-right:10px;">
+					</div>
+					<div class="weui-cell__bd">
+						<p class="topic-cmd-username">名字</p>
+						<p class="topic-cmd-text">炸了炸了炸了</p>
+						<p class="topic-timestamp">12:21</p>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd">
+						<img src="pic_160.png" style="display:block;width:60px;margin-right:10px;">
+					</div>
+					<div class="weui-cell__bd">
+						<p class="topic-cmd-username">名字</p>
+						<p class="topic-cmd-text">炸了炸了炸了</p>
+						<p class="topic-timestamp">10:21</p>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd">
+						<img src="pic_160.png" style="display:block;width:60px;margin-right:10px;">
+					</div>
+					<div class="weui-cell__bd">
+						<p class="topic-cmd-username">名字</p>
+						<p class="topic-cmd-text">炸了炸了炸了</p>
+						<p class="topic-timestamp">9:12</p>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	var hidebtn = document.getElementById("hidebtn");
+	var cmd = document.getElementById("cmd");
+	var hidebtn_index = 1;
+	hidebtn.onclick = function(){
+		if (hidebtn_index == 0) {
+			hidebtn_index = 1;
+			cmd.style.transform = "translateY(100%)";
+			hidebtn.style.transform = "rotate(180deg)";
+		}
+		else if (hidebtn_index == 1) {
+			hidebtn_index = 0;
+			cmd.style.transform = "translateY(0)";
+			hidebtn.style.transform = "rotate(0)";
+		}
+	}
+</script>
+</html>
